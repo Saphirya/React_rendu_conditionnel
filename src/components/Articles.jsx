@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 function Articles() {
   const articles = [
     {
@@ -19,14 +21,12 @@ function Articles() {
   return (
     <div style={{ width: "700px" }}>
       <h1 className="mb-20">Liste des articles</h1>
-      {articles
-        .filter((a) => a.published)
-        .map((article) => (
-          <div key={article.title} className="mb-20">
-            <h2>{article.title}</h2>
-            <p>{article.content}</p>
-          </div>
-        ))}
+      {articles.map((article) => (
+        <Fragment key={article.title}>
+          <h2>{article.title}</h2>
+          <p>{article.content}</p>
+        </Fragment>
+      ))}
     </div>
   );
 }

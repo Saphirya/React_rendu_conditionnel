@@ -1,13 +1,8 @@
-function Article() {
+function Article({ title, content }) {
   return (
     <div className="card p-20">
-      <h2 className="mb-10">Titre de l&apos;article</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-        architecto culpa veniam ut excepturi ex dolorem? Possimus sit laborum
-        quibusdam exercitationem! Earum est quidem corporis id? Distinctio
-        tenetur amet voluptates!
-      </p>
+      <h2 className="mb-10">{title}</h2>
+      <p>{content}</p>
     </div>
   );
 }
